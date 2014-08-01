@@ -1,0 +1,81 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000007fef5f950ec, pid=5368, tid=5444
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_11-b12) (build 1.8.0_11-b12)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.11-b03 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# C  [jniopencv_core.dll+0x250ec]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000008f41000):  JavaThread "Thread-2" [_thread_in_native, id=5444, stack(0x000000000c950000,0x000000000ca50000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x000000005e490840
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00000000097a2dc0, RCX=0x0000000000000000, RDX=0x000000000ca4eef8
+RSP=0x000000000ca4ee40, RBP=0x000000000ca4eed8, RSI=0x000000005e490840, RDI=0x000000000ca4eef8
+R8 =0x0000000000000032, R9 =0x00000000ebc670b0, R10=0x0000000000000052, R11=0x000000006e719230
+R12=0x0000000000000000, R13=0x00000000097a2dc0, R14=0x000000000ca4eef8, R15=0x0000000008f41000
+RIP=0x000007fef5f950ec, EFLAGS=0x0000000000010246
+
+Top of Stack: (sp=0x000000000ca4ee40)
+0x000000000ca4ee40:   00000000eb195460 0000000000000000
+0x000000000ca4ee50:   4055249260000000 000000000f0256ba
+0x000000000ca4ee60:   000000000f016f70 000000000f02518e
+0x000000000ca4ee70:   00000000097a2dc0 0000000000000019
+0x000000000ca4ee80:   0000000009102230 3ff199999999999a
+0x000000000ca4ee90:   0000000000000003 000000000ca4ee98
+0x000000000ca4eea0:   0000000000000000 000000000ca4eef8
+0x000000000ca4eeb0:   0000000009879318 0000000000000000
+0x000000000ca4eec0:   00000000097a2dc0 0000000000000000
+0x000000000ca4eed0:   000000000ca4eef8 000000000ca4ef40
+0x000000000ca4eee0:   000000000f016f70 0000000000000000
+0x000000000ca4eef0:   000000000f01f016 00000000ebc670b0
+0x000000000ca4ef00:   000000000ca4ef00 000000000614683c
+0x000000000ca4ef10:   000000000ca4efa0 0000000006152230
+0x000000000ca4ef20:   0000000000000000 0000000006146aa0
+0x000000000ca4ef30:   000000000ca4eef8 000000000ca4ef98 
+
+Instructions: (pc=0x000007fef5f950ec)
+0x000007fef5f950cc:   5f c3 48 8b 03 4c 8b 05 f8 db 06 00 48 8b d7 ff
+0x000007fef5f950dc:   90 20 03 00 00 48 8b 5c 24 30 48 63 c8 48 03 c9
+0x000007fef5f950ec:   8b 04 ce 48 8b 74 24 38 48 83 c4 20 5f c3 cc cc
+0x000007fef5f950fc:   cc cc cc cc 48 8b c4 57 48 83 ec 70 48 c7 44 24 
+
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x00000000097a2dc0 is an unknown value
+RCX=0x0000000000000000 is an unknown value
+RDX=0x000000000ca4eef8 is pointing into the stack for thread: 0x0000000008f41000
+RSP=0x000000000ca4ee40 is pointing into the stack for thread: 0x0000000008f41000
+RBP=0x000000000ca4eed8 is pointing into the stack for thread: 0x0000000008f41000
+RSI=0x000000005e490840 is an unknown value
+RDI=0x000000000ca4eef8 is pointing into the stack for thread: 0x0000000008f41000
+R8 =0x0000000000000032 is an unknown value
+R9 =0x00000000ebc670b0 is an oop
+com.googlecode.javacv.cpp.opencv_core$CvRect 
+ - klass: 'com/googlecode/javacv/cpp/opencv_core$CvRect'
+R10=0x0000000000000052 is an unknown value
+R11=0x000000006e719230 is an unknown value
+R12=0x0000000000000000 is an unknown value
+R13=0x00000000097a2dc0 is an unknown value
+R14=0x000000000ca4eef8 is pointing into the stack for thread: 0x0000000008f41000
+R15=0x0000000008f41000 is a thread
+
+
+Stack: [0x000000000c950000,0x000000000ca50000],  sp=0x000000000ca4ee40,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C
